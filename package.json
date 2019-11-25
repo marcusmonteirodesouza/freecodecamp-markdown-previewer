@@ -17,6 +17,7 @@
     "@babel/preset-react": "^7.7.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
     "babel-jest": "^24.9.0",
     "eslint-config-xo": "^0.27.2",
     "eslint-config-xo-react": "^0.20.0",
@@ -59,6 +60,7 @@
     ]
   },
   "dependencies": {
+    "marked": "^0.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
