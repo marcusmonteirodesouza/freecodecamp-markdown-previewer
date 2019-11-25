@@ -1,0 +1,53 @@
+/* Variables */
+
+:root {
+  --spacing-small: 0.5rem;
+}
+
+.mr2 {
+  margin-right: var(--spacing-small);
+}
+
+.tc {
+  text-align: center;
+}
+
+.ba {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-template {
+  grid-template:
+    'header' auto
+    'editor' 40vh
+    'preview' auto;
+}
+
+.gap2 {
+  gap: var(--spacing-small);
+}
+
+.header {
+  grid-area: header;
+}
+
+.editor {
+  grid-area: editor;
+}
+
+.preview {
+  grid-area: preview;
+}
+
+@media screen and (min-width: 30em) {
+  .grid-template-ns {
+    grid-template:
+      'header header' auto
+      'editor preview' 85vh / 1fr 1fr;
+  }
+}

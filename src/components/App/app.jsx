@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Editor from '../Editor';
 import Previewer from '../Previewer';
+
+import './app.css'; // eslint-disable-line import/no-unassigned-import
 
 const App = () => {
   const cr = `${String.fromCharCode(13)}${String.fromCharCode(13)}`;
@@ -13,10 +17,25 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1>Hello, Markdown Previewer!</h1>
-      <Editor defaultText={defaultText} onTextChanged={onTextChanged} />
-      <div id="preview">
+    <div className="grid grid-template grid-template-ns gap2">
+      <h1 className="header tc">
+        <a
+          className="mr2"
+          href="https://github.com/marcusmonteirodesouza/freecodecamp-markdown-previewer"
+          title="See source code on Github"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faGithub} />
+        </a>
+        Markdown Previewer
+      </h1>
+      <Editor
+        className="editor"
+        defaultText={defaultText}
+        onTextChanged={onTextChanged}
+      />
+      <div className="preview ba" id="preview">
         <Previewer text={text} />
       </div>
     </div>
