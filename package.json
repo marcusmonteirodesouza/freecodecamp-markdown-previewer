@@ -1,0 +1,65 @@
+{
+  "name": "freecodecamp-markdown-previewer",
+  "version": "1.0.0",
+  "description": "My solution to FreeCodeCamp's Build a Markdown Previewer challenge",
+  "scripts": {
+    "format": "prettier --write ./**/*.{html,css,,md,json,js,jsx}",
+    "lint": "xo --fix",
+    "test": "jest",
+    "start": "parcel index.html --open"
+  },
+  "keywords": [],
+  "author": "Marcus Vinicius Monteiro de Souza",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "babel-jest": "^24.9.0",
+    "eslint-config-xo": "^0.27.2",
+    "eslint-config-xo-react": "^0.20.0",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.3",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1",
+    "xo": "^0.25.3"
+  },
+  "xo": {
+    "prettier": true,
+    "extends": "xo-react",
+    "envs": [
+      "browser",
+      "jest"
+    ]
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setup-tests-after-env.js"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./**/*.{html,css,md,json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "./**/*.{js,jsx}": [
+      "xo --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
