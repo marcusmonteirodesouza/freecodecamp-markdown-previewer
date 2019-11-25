@@ -6,7 +6,8 @@
     "format": "prettier --write ./**/*.{html,css,,md,json,js,jsx}",
     "lint": "xo --fix",
     "test": "jest",
-    "start": "parcel index.html --open"
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
   },
   "keywords": [],
   "author": "Marcus Vinicius Monteiro de Souza",

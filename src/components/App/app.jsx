@@ -35,7 +35,7 @@ const App = () => {
         defaultText={defaultText}
         onTextChanged={onTextChanged}
       />
-      <div className="preview ba" id="preview">
+      <div className="preview ba">
         <Previewer text={text} />
       </div>
     </div>
