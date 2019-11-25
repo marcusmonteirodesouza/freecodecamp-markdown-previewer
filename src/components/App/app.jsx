@@ -3,8 +3,8 @@ import Editor from '../Editor';
 import Previewer from '../Previewer';
 
 const App = () => {
-  const cr = String.fromCharCode(13);
-  const defaultText = `# H1 size${cr}## H2 size${cr}[a link]()${cr}${cr}\`inline code\`${cr}${cr}`;
+  const cr = `${String.fromCharCode(13)}${String.fromCharCode(13)}`;
+  const defaultText = `# H1 size${cr}## H2 size${cr}[a link]()${cr}\`inline code\`${cr}\`\`\`js${cr}const codeblock = true${cr}\`\`\`${cr}1. a list item${cr}> a blockquote${cr}![an image](https://picsum.photos/200)${cr}**bolded text**`;
 
   const [text, setText] = useState(defaultText);
 
